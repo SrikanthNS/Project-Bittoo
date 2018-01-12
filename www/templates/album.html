@@ -1,0 +1,35 @@
+<ion-view title='
+<img class="logo" src="img/baby/baby-idea-icon.png"/>
+<img class="logo" src="img/baby/baby-laughing-icon.png"/>
+<img class="logo" src="img/baby/baby-vomit-icon.png"/>
+<img class="logo" src="img/baby/baby-drinking-icon.png"/>
+<img class="logo" src="img/baby/baby-sleeping-icon.png"/>
+<img class="logo" src="img/baby/baby-crying-icon.png"/>
+<img class="logo" src="img/baby/baby-sucking.ico"/>
+'>
+
+  <ion-pane id="gallery">
+    <ion-content ng-controller="GalleryCtrl"> 
+       <div class="row">        
+        <a class="item item-list-detail" >          
+            <img ng-repeat="image in images_set1" ng-src="{{image.src}}"  ng-click="showImages(0, $index)" class="image-list-thumb"/>         
+        </a>          
+      </div>  
+      <div class="row">        
+        <a class="item item-list-detail" >         
+            <img ng-repeat="image in images_set2" ng-src="{{image.src}}"  ng-click="showImages(1, $index)" class="image-list-thumb"/>          
+        </a>          
+      </div>  
+      <div class="row">        
+        <a class="item item-list-detail" >          
+            <img ng-repeat="image in images_set3" ng-src="{{image.src}}"  ng-click="showImages(2, $index)" class="image-list-thumb"/>         
+        </a>          
+      </div>  
+      <div class="row">        
+        <a class="item item-list-detail" >         
+            <img ng-repeat="image in images_set4" ng-src="{{image.src}}"  ng-click="showImages(3, $index)" class="image-list-thumb"/>          
+        </a>          
+      </div>  
+    </ion-content>
+  </ion-pane>
+</ion-view>n

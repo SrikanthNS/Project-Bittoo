@@ -1,0 +1,119 @@
+/* line 1280, main.scss */
+.flip-container {
+  perspective: 600px;
+  -webkit-perspective: 600px;
+}
+
+/* line 1285, main.scss */
+.flip-container, .front, .back {
+  width: inherit;
+  height: inherit;
+}
+
+/* flip speed goes here */
+/* line 1291, main.scss */
+.flipper {
+  transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/* line 1301, main.scss */
+.flip .back {
+  -moz-transform: rotateY(0deg);
+  -o-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+}
+
+/* line 1308, main.scss */
+.flip .front {
+  -moz-transform: rotateY(-180deg);
+  -o-transform: rotateY(-180deg);
+  -ms-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+}
+
+/* hide back of pane during swap */
+/* line 1316, main.scss */
+.front, .back {
+  -webkit-transition: all .4s ease-in-out;
+  -ms-transition: all .4s ease-in-out;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* front pane, placed above back */
+/* line 1327, main.scss */
+.front {
+  z-index: 2;
+  /* for firefox 31 */
+  transform: rotateY(0deg);
+  -webkit-transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+/* line 1335, main.scss */
+.back {
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+}
+
+/* line 1344, main.scss */
+.pad {
+  height: 100%;
+  width: 100%;
+  z-index: 5;
+  background-color: #fff;
+}
+
+
+.more-front {
+    position: absolute;
+    bottom: 4vh;
+    /* left: 15pt; */
+    right: 28px;
+    background-color: #375890;
+    border: 1pt solid #6293e6;
+    border-radius: 100pt;
+    -webkit-border-radius: 100pt;
+    -ms-border-radius: 100pt;
+    font-family: helvetica !important;
+    font-size: 11pt;
+    color: whitesmoke;
+    z-index: 200;
+    -webkit-transform: translate3d(0, 0, 0);
+    width: 87pt;
+    height: 30pt;
+    line-height: 29pt;
+    text-align: center;
+}
+
+.more-back {
+    position: absolute;
+    display:none;
+    bottom: 1.5vh;
+    /* left: 15pt; */
+    right: 28px;
+    background-color: #375890;
+    border: 1pt solid #6293e6;
+    border-radius: 100pt;
+    -webkit-border-radius: 100pt;
+    -ms-border-radius: 100pt;
+    font-family: helvetica !important;
+    font-size: 11pt;
+    color: whitesmoke;
+    z-index: 200;
+    -webkit-transform: translate3d(0, 0, 0);
+    width: 87pt;
+    height: 30pt;
+    line-height: 29pt;
+    text-align: center;
+}
